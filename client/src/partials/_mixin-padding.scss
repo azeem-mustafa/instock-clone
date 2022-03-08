@@ -1,0 +1,47 @@
+@use './variables' as *;
+@use './mixins' as *;
+@use './typography' as *;
+
+@mixin padding-sides {
+  padding: 0rem 1rem;
+
+  @include tablet {
+    padding: 0rem 2rem;
+  }
+
+  @include desktop {
+    padding: 0rem 10%;
+  }
+}
+
+//radio button
+
+@mixin radio-spacing-between-group-and-label {
+  //double check what this means
+}
+
+//tags
+
+@mixin instock-tag {
+  height: 1.5rem;
+  width: 100%;
+  padding: 0rem 0.5rem;
+  color: $Green;
+  border-radius: 1.25rem;
+
+  @include tablet {
+    height: 1.625rem;
+  }
+}
+
+@mixin outstock-tag {
+  height: 1.5rem;
+  width: 100%;
+  padding: 0rem 0.5rem;
+  color: $Red;
+  border-radius: 1.25rem;
+
+  @include tablet {
+    height: 1.625rem;
+  }
+}

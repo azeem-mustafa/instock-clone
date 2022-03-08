@@ -1,0 +1,39 @@
+@use '../../partials/mixins' as *;
+@use '../../partials/mixin-padding' as *;
+@use '../../partials/typography' as *;
+@use '../../partials/variables' as *;
+@use '../EditWarehousePage/EditWarehousePage.scss';
+
+.add-warehouse {
+    @extend .edit-warehouse;
+
+    &__back-arrow {
+        cursor: pointer;
+    }
+
+    &__page-header {
+        @extend .edit-warehouse__page-header;
+    }
+
+    &__page-title {
+        @extend .edit-warehouse__page-title;
+    }
+
+    &__form{
+        @extend .edit-warehouse__form;
+    }
+
+    &__action-container {
+        @extend .edit-warehouse__action-container;
+    }
+
+    &__cancel {
+        @extend .edit-warehouse__cancel;
+        cursor: pointer;
+    }
+    
+    &__save {
+        @extend .edit-warehouse__save;
+        cursor: pointer;
+    }
+}

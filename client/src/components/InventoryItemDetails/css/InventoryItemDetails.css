@@ -1,0 +1,91 @@
+/*screen breakpoints*/
+.item {
+  text-align: left;
+  padding: 1rem 1.6rem;
+  border-top: 0.0625rem solid #bdc5d5;
+  color: #13182c;
+}
+.item__description-header, .item__category-header, .item__status-header, .item__quantity-header, .item__location-header {
+  line-height: 1rem;
+  font-size: 0.6875rem;
+  color: #5c667e;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.item__paragraph, .item__category, .item__quantity, .item__location {
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+}
+.item__status {
+  color: #158463;
+  font-weight: 600;
+  font-size: 0.6875rem;
+  line-height: 1rem;
+  background-color: rgba(21, 132, 99, 0.07);
+  width: 3.8125rem;
+  border-radius: 1.25rem;
+  text-align: center;
+  padding: 0.25rem 0.5rem;
+}
+.item__description, .item__category-container, .item__status-container, .item__quantity-container {
+  margin-bottom: 1rem;
+}
+.item__info {
+  display: flex;
+}
+.item__status-container, .item__quantity-container {
+  width: 50%;
+}
+.item__quantity-container {
+  padding-left: 0.6rem;
+}
+@media (min-width: 48rem) {
+  .item {
+    display: flex;
+    padding: 1.4rem 1.7rem;
+  }
+  .item__description-container, .item__info-container {
+    width: 50%;
+  }
+  .item__description-container {
+    padding-right: 3rem;
+  }
+  .item__info-container {
+    border-left: 0.1rem solid #bdc5d5;
+    padding-left: 2.5rem;
+  }
+  .item__location-container {
+    margin-top: 0.3rem;
+  }
+  .item__description, .item__info {
+    height: 50%;
+  }
+  .item__description-header, .item__category-header, .item__status-header, .item__quantity-header, .item__location-header {
+    line-height: 1.125rem;
+    font-size: 0.75rem;
+    color: #5c667e;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+  .item__paragraph, .item__category, .item__quantity, .item__location {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+@media (min-width: 80rem) {
+  .item__description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .item__description {
+    margin-bottom: 1.6rem;
+  }
+  .item__location-container {
+    margin-top: 0.9rem;
+  }
+  .item__category-container {
+    margin-bottom: 0.5rem;
+  }
+}/*# sourceMappingURL=InventoryItemDetails.css.map */

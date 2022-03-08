@@ -1,0 +1,25 @@
+//screen breakpoints
+
+$breakpoint-tablet: 48rem;
+$breakpoint-desktop: 80rem;
+
+//primary colors
+
+$Instock-Black: #13182c; //global text
+$Instock-Indigo: #2e66e5; //interactive element
+$white: #ffffff; //global white
+
+//secondary colors 
+
+$Slate: #5c667e; //table column headers and placeholder text
+$Cloud: #bdc5d5; //outlines, dividers, borders, table sorting icon
+
+//background colors
+
+$Graphite: #232940; //top nav, cta hover
+$Light-Grey: #F7F8F9; //page background, table column header background, cta background
+
+//supporting colors
+
+$Green: #158463; //instock label
+$Red: #C94515; //out of stock label and delete icon

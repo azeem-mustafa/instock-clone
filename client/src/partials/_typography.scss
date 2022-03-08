@@ -1,0 +1,188 @@
+@use './mixins' as *;
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('../assets/fonts/TitilliumWeb-Black.woff2') format('woff2'),
+        url('../assets/fonts/TitilliumWeb-Black.woff') format('woff'),
+        url('../assets/fonts/TitilliumWeb-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('../assets/fonts/TitilliumWeb-Bold.woff2') format('woff2'),
+        url('../assets/fonts/TitilliumWeb-Bold.woff') format('woff'),
+        url('../assets/fonts/TitilliumWeb-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('../assets/fonts/TitilliumWeb-Italic.woff2') format('woff2'),
+        url('../assets/fonts/TitilliumWeb-Italic.woff') format('woff'),
+        url('../assets/fonts/TitilliumWeb-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('../assets/fonts/TitilliumWeb-ExtraLight.woff2') format('woff2'),
+        url('../assets/fonts/TitilliumWeb-ExtraLight.woff') format('woff'),
+        url('../assets/fonts/TitilliumWeb-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('../assets/fonts/TitilliumWeb-LightItalic.woff2') format('woff2'),
+        url('../assets/fonts/TitilliumWeb-LightItalic.woff') format('woff'),
+        url('../assets/fonts/TitilliumWeb-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('../assets/fonts/TitilliumWeb-ExtraLightItalic.woff2') format('woff2'),
+        url('../assets/fonts/TitilliumWeb-ExtraLightItalic.woff') format('woff'),
+        url('../assets/fonts/TitilliumWeb-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('../assets/fonts/TitilliumWeb-Light.woff2') format('woff2'),
+        url('../assets/fonts/TitilliumWeb-Light.woff') format('woff'),
+        url('../assets/fonts/TitilliumWeb-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('../assets/fonts/TitilliumWeb-BoldItalic.woff2') format('woff2'),
+        url('../assets/fonts/TitilliumWeb-BoldItalic.woff') format('woff'),
+        url('../assets/fonts/TitilliumWeb-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('../assets/fonts/TitilliumWeb-SemiBoldItalic.woff2') format('woff2'),
+        url('../assets/fonts/TitilliumWeb-SemiBoldItalic.woff') format('woff'),
+        url('../assets/fonts/TitilliumWeb-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('../assets/fonts/TitilliumWeb-SemiBold.woff2') format('woff2'),
+        url('../assets/fonts/TitilliumWeb-SemiBold.woff') format('woff'),
+        url('../assets/fonts/TitilliumWeb-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('../assets/fonts/TitilliumWeb-Regular.woff2') format('woff2'),
+        url('../assets/fonts/TitilliumWeb-Regular.woff') format('woff'),
+        url('../assets/fonts/TitilliumWeb-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+*, *::before, *::after{
+    font-family: "Titillium Web";
+}
+
+//text styles
+
+@mixin H1-Page-Header{
+    font-size: 1.75rem;
+    line-height: 2rem;
+
+    @include tablet{
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+}
+
+@mixin H2-Subheader{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+
+    @include tablet{
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+}
+
+@mixin H3-Labels-Links-Buttons{
+    font-size: 0.813rem;
+    line-height: 1.25rem;
+
+    @include tablet{
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+    }
+}
+
+@mixin H4-Table-Header{
+    font-size: 0.688rem;
+    line-height: 1rem;
+
+    @include tablet{
+        font-size: 0.75rem;
+        line-height: 1.125rem;
+    }
+}
+
+@mixin P1-Body-Large{
+    font-size: 0.938rem;
+    line-height: 1.625rem;
+
+    @include tablet{
+        font-size: 1rem;
+        line-height: 1.75rem;
+    }
+}
+
+@mixin P2-Body-Medium{
+    font-size: 0.813rem;
+    line-height: 1.25rem;
+
+    @include tablet{
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+    }
+}
+
+@mixin P3-Body-Small{
+    font-size: 0.688rem;
+    line-height: 1rem;
+
+    @include tablet{
+        font-size: 0.75rem;
+        line-height: 1.125rem;
+    }
+}

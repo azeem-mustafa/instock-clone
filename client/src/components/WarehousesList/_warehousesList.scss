@@ -1,0 +1,246 @@
+@use "../../partials/mixin-padding" as *;
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+@use "../../partials/typography" as *;
+
+.warehouses {
+    display: flex;
+    flex-direction: column;
+    border-top: 0.0625rem solid $Cloud;
+
+    @include tablet {
+        display: flex;
+        padding: 0;
+    }
+
+    &__box {
+        border-bottom: 0.0625rem solid $Cloud;
+        padding: 0.6rem 1.3rem;
+        margin-top: 0.5rem;
+        text-align: left;
+    }
+
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet {
+            width: 100%;
+        }
+    }
+
+    //this is the first div containing location and address
+
+    &__detail-flex {
+        width: 50%;
+        @include tablet {
+            display: flex;
+            width: 40%;
+            flex-grow: 2;
+        }
+    }
+
+    &__location {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1rem;
+
+        @include tablet {
+            width: 10rem;
+            margin-right: 2rem;
+        }
+
+        &-label {
+            @include margin-reset;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #5c667e;
+            @include H4-Table-Header;
+        }
+
+        //this is the div for the blue text of the location name
+
+        &-link-box {
+            display: flex;
+            align-items: center;
+        }
+
+        //this is the actual blue text for location name
+
+        &-link {
+            @include margin-reset;
+            @include H3-Labels-Links-Buttons;
+            font-weight: 600;
+            color: $Instock-Indigo;
+        }
+    }
+
+    &__address {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            width: 100%;
+        }
+
+        &-label {
+            @include margin-reset;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #5c667e;
+            @include H4-Table-Header;
+        }
+
+        &-info {
+            @include P2-Body-Medium;
+            color: $Instock-Black;
+            @include margin-reset;
+
+            @include tablet {
+                display: flex;
+                flex-grow: 2;
+                width: 100%;
+            }
+        }
+    }
+
+    //this is the secon div containing the person and thier contact details
+
+    &__contact-flex {
+        width: 50%;
+        @include tablet {
+            display: flex;
+            justify-content: left;
+            text-align: left;
+
+            width: 50%;
+        }
+    }
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1rem;
+
+        @include tablet {
+            margin-right: 2rem;
+            width: 7rem;
+        }
+
+        &-label {
+            @include margin-reset;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #5c667e;
+            @include H4-Table-Header;
+        }
+
+        &-name {
+            @include P2-Body-Medium;
+            color: $Instock-Black;
+            @include margin-reset;
+
+            @include tablet {
+                text-align: left;
+            }
+        }
+    }
+
+    &__contact-info {
+        display: flex;
+        flex-direction: column;
+
+        &-label {
+            @include margin-reset;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #5c667e;
+            @include H4-Table-Header;
+        }
+
+        &-number {
+            @include P2-Body-Medium;
+            color: $Instock-Black;
+            @include margin-reset;
+        }
+
+        &-email {
+            @include P2-Body-Medium;
+            color: $Instock-Black;
+            @include margin-reset;
+        }
+    }
+
+    //this is the div containing the pencil and bin image
+
+    &__images {
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet {
+            display: none;
+        }
+
+        &-non-mobile {
+            display: none;
+            @include tablet {
+                display: unset;
+                display: flex;
+            }
+            &-pen {
+                margin-left: 1rem;
+            }
+        }
+    }
+}
+
+
+//to remove the labels once you go into tablet view
+
+@include tablet {
+    .warehouses:nth-child(n + 2)
+        > .warehouses__box
+        > .warehouses__flex
+        > .warehouses__detail-flex
+        > .warehouses__location
+        > .warehouses__location-label {
+        display: none;
+    }
+}
+
+@include tablet {
+    .warehouses:nth-child(n + 2)
+        > .warehouses__box
+        > .warehouses__flex
+        > .warehouses__detail-flex
+        > .warehouses__address
+        > .warehouses__address-label {
+        display: none;
+    }
+}
+
+@include tablet {
+    .warehouses:nth-child(n + 2)
+        > .warehouses__box
+        > .warehouses__flex
+        > .warehouses__contact-flex
+        > .warehouses__contact
+        > .warehouses__contact-label {
+        display: none;
+    }
+}
+
+@include tablet {
+    .warehouses:nth-child(n + 2)
+        > .warehouses__box
+        > .warehouses__flex
+        > .warehouses__contact-flex
+        > .warehouses__contact-info
+        > .warehouses__contact-info-label {
+        display: none;
+    }
+}

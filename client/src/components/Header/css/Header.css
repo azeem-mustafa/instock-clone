@@ -1,0 +1,233 @@
+/*screen breakpoints*/
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-Black.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-Black.woff") format("woff"), url("../assets/fonts/TitilliumWeb-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-Bold.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-Bold.woff") format("woff"), url("../assets/fonts/TitilliumWeb-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-Italic.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-Italic.woff") format("woff"), url("../assets/fonts/TitilliumWeb-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-ExtraLight.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-ExtraLight.woff") format("woff"), url("../assets/fonts/TitilliumWeb-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-LightItalic.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-LightItalic.woff") format("woff"), url("../assets/fonts/TitilliumWeb-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-ExtraLightItalic.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-ExtraLightItalic.woff") format("woff"), url("../assets/fonts/TitilliumWeb-ExtraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-Light.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-Light.woff") format("woff"), url("../assets/fonts/TitilliumWeb-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-BoldItalic.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-BoldItalic.woff") format("woff"), url("../assets/fonts/TitilliumWeb-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-SemiBoldItalic.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-SemiBoldItalic.woff") format("woff"), url("../assets/fonts/TitilliumWeb-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-SemiBold.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-SemiBold.woff") format("woff"), url("../assets/fonts/TitilliumWeb-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-Regular.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-Regular.woff") format("woff"), url("../assets/fonts/TitilliumWeb-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+*, *::before, *::after {
+  font-family: "Titillium Web";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li,
+a {
+  font-family: "Titillium Web";
+  text-decoration: none;
+  list-style-type: none;
+  color: #ffffff;
+}
+
+.nav {
+  background-color: #232940;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 12.5rem;
+}
+@media (min-width: 48rem) {
+  .nav {
+    flex-direction: row;
+    height: 11.625rem;
+  }
+}
+.nav__flex-box {
+  padding: 0rem 1rem;
+}
+@media (min-width: 48rem) {
+  .nav__flex-box {
+    padding: 0rem 2rem;
+  }
+}
+@media (min-width: 80rem) {
+  .nav__flex-box {
+    padding: 0rem 10%;
+  }
+}
+@media (min-width: 48rem) {
+  .nav__flex-box {
+    flex-grow: 2;
+    display: flex;
+    align-items: flex-start;
+  }
+}
+@media (min-width: 80rem) {
+  .nav__flex-box {
+    width: 80%;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 80rem) {
+  .nav__title {
+    display: flex;
+    width: 30%;
+    justify-content: left;
+  }
+}
+.nav__logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.nav__items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+@media (min-width: 48rem) {
+  .nav__items {
+    flex-grow: 2;
+    justify-content: right;
+    align-items: center;
+  }
+}
+@media (min-width: 80rem) {
+  .nav__items {
+    width: 50%;
+    flex-grow: unset;
+  }
+}
+.nav__active {
+  height: 2rem;
+  width: 100%;
+  padding: 0rem 1rem;
+  color: #ffffff;
+  background-color: #2e66e5;
+  border-radius: 1.25rem;
+  width: 10.188rem;
+  background-color: #13182c;
+  padding: 0rem 1rem;
+  text-align: center;
+  align-items: center;
+}
+.nav__active:hover {
+  background-color: #232940;
+}
+@media (min-width: 48rem) {
+  .nav__active {
+    width: unset;
+    height: 2.375rem;
+  }
+}
+.nav__active:hover {
+  -webkit-text-decoration: underline 2px solid #ffffff;
+          text-decoration: underline 2px solid #ffffff;
+  background-color: #13182c;
+}
+@media (min-width: 48rem) {
+  .nav__active {
+    display: flex;
+    margin-right: 24px;
+    height: 2.8rem;
+  }
+}
+.nav__links {
+  height: 2rem;
+  width: 100%;
+  padding: 0rem 1rem;
+  color: #ffffff;
+  background-color: #2e66e5;
+  border-radius: 1.25rem;
+  width: 10.188rem;
+  text-align: center;
+  background-color: #232940;
+  padding: 0rem 1rem;
+}
+.nav__links:hover {
+  background-color: #232940;
+}
+@media (min-width: 48rem) {
+  .nav__links {
+    width: unset;
+    height: 2.375rem;
+  }
+}
+.nav__links:hover {
+  -webkit-text-decoration: underline 2px solid #ffffff;
+          text-decoration: underline 2px solid #ffffff;
+  background-color: #13182c;
+  height: 2.8rem;
+}
+@media (min-width: 48rem) {
+  .nav__links {
+    display: flex;
+    align-items: center;
+  }
+}/*# sourceMappingURL=Header.css.map */

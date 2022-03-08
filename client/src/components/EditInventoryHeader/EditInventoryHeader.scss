@@ -1,0 +1,23 @@
+@use '../../partials/variables' as *;
+@use '../../partials/mixins' as *;
+
+.edit-header {
+  display: flex;
+  align-items: center;
+  height: 5.75rem;
+  padding-left: 1.7rem;
+
+  &__icon {
+    height: 1.2rem;
+    width: 1.2rem;
+    margin-right: 0.4rem;
+    cursor: pointer;
+  }
+
+  &__header {
+    line-height: 2.25rem;
+    font-weight: 600;
+    font-size: 1.75rem;
+    color: $Instock-Black;
+  }
+}

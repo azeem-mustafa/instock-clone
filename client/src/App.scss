@@ -1,0 +1,88 @@
+@use './partials/typography' as *;
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+@use './partials/mixin-padding' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  font-family: "Titillium Web";
+  font-weight: 400;
+}
+
+.parent {
+  background-color: $Light-Grey;
+  @include padding-sides;
+
+  @include padding-sides;
+
+  &__container {
+    position: relative;
+    top: -3.8rem;
+    min-height: 17rem;
+    background-color: $white;
+    border-radius: 0.1875rem;
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+  }
+
+  @include tablet {
+    &__container {
+      top: -5rem;
+    }
+  }
+
+  @include desktop {
+    &__container {
+      top: -6rem;
+    }
+  }
+}

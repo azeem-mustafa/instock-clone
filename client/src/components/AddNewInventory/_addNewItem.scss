@@ -1,0 +1,377 @@
+@use '../../partials/variables' as *;
+@use '../../partials/mixins' as *;
+@use '../../partials/typography' as *;
+@use '../../partials/mixin-padding' as *;
+
+.main {
+  align-items: baseline;
+  padding: 0rem 2.5rem;
+  width: inherit;
+
+  &__inventory-flex {
+    display: flex;
+
+    &-link {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  @include tablet {
+    border-bottom: $Cloud 0.0625rem solid;
+  }
+
+  &__arrow {
+    padding-right: 1rem;
+    cursor: pointer;
+  }
+
+  //first form section
+
+  &__sub-section-one {
+    border-top: $Cloud 0.0625rem solid;
+
+    @include tablet {
+      width: 50%;
+      border-right: 0.063rem solid $Cloud;
+      border-top: none;
+      margin-top: 1rem;
+    }
+  }
+
+  &__sub-section-logo {
+    padding: 0rem 2.5rem;
+    @include H2-Subheader;
+    color: $Instock-Black;
+  }
+
+  &__form-one {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2.5rem;
+  }
+
+  &__form-label {
+    @include H3-Labels-Links-Buttons;
+    color: $Instock-Black;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  &__input-item-name {
+    @include form-fields;
+    color: $Slate;
+    margin-bottom: 1rem;
+
+    &:focus {
+      outline-color: $Instock-Indigo;
+    }
+  }
+
+  &__input-item-desc {
+    @include form-fields;
+    height: 7.5rem;
+    padding-top: 0.5rem;
+    color: $Slate;
+    margin-bottom: 1rem;
+
+    @include tablet {
+      height: 7.5rem;
+    }
+  }
+
+  &__input-select {
+    @include form-fields;
+    color: $Slate;
+    margin-bottom: 1rem;
+  }
+
+  //second form section
+
+  &__sub-section-two {
+    border-top: $Cloud 0.0625rem solid;
+
+    @include tablet {
+      width: 50%;
+      border-top: none;
+      margin-top: 1rem;
+    }
+  }
+
+  &__sub-section-logo-two {
+    padding: 0rem 2.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  &__form-two {
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 2.5rem;
+
+    &-label {
+      @include H3-Labels-Links-Buttons;
+      color: $Instock-Black;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    &-radio-flex {
+      display: inline-flex;
+      margin-bottom: 1rem;
+    }
+
+    &-in-stock {
+      width: 50%;
+
+      @include tablet {
+        display: flex;
+        width: fit-content;
+        margin-right: 2.5rem;
+      }
+    }
+
+    &-out-stock {
+      width: 50%;
+    }
+
+    &-input-quantity {
+      @include form-fields;
+      margin-bottom: 1rem;
+
+      @include desktop {
+        width: 7.625rem;
+      }
+    }
+
+    &-warehouse-select {
+      @include form-fields;
+      color: $Slate;
+      margin-bottom: 1rem;
+    }
+
+    &-button-flex {
+      display: flex;
+      margin: 1rem 0rem;
+      justify-content: space-between;
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &-button-cancel {
+      height: 2rem;
+      width: 100%;
+      padding: 0rem 1rem;
+      border-radius: 1.25rem;
+      border-color: unset;
+      border-style: solid;
+      border-width: 0.063rem;
+      border-color: $Cloud;
+      background-color: $white;
+      color: $Slate;
+      outline-color: $Cloud;
+
+      &:hover {
+        outline-color: $Instock-Indigo;
+        background-color: $white;
+        border-color: $Instock-Indigo;
+        color: $Instock-Indigo;
+      }
+    }
+
+    &-button-add {
+      @include primary-button;
+      border-color: unset;
+      border-style: solid;
+      border-width: 0.063rem;
+      border-color: $Instock-Indigo;
+      margin-left: 1rem;
+    }
+
+    //for tab
+
+    &-button-flex-tablet {
+      display: none;
+
+      @include tablet {
+        display: unset;
+        display: flex;
+        flex-direction: column;
+        padding: 0rem 2.5rem;
+
+        &-label {
+          @include H3-Labels-Links-Buttons;
+          color: $Instock-Black;
+          font-weight: 600;
+          margin-bottom: 0.25rem;
+        }
+
+        &-radio-flex {
+          display: inline-flex;
+          margin-bottom: 1rem;
+        }
+
+        &-in-stock {
+          width: 50%;
+
+          @include tablet {
+            display: flex;
+            width: fit-content;
+            margin-right: 2.5rem;
+          }
+        }
+
+        &-out-stock {
+          width: 50%;
+        }
+
+        &-input-quantity {
+          @include form-fields;
+          margin-bottom: 1rem;
+
+          @include desktop {
+            width: 7.625rem;
+          }
+        }
+
+        &-warehouse-select {
+          @include form-fields;
+          color: $Slate;
+          margin-bottom: 1rem;
+        }
+
+        &-button-flex {
+          display: flex;
+          margin: 1rem 0rem;
+          justify-content: space-between;
+
+          @include tablet {
+            display: none;
+          }
+        }
+
+        &-button-cancel {
+          height: 2rem;
+          width: 100%;
+          padding: 0rem 1rem;
+          border-radius: 1.25rem;
+          border-color: unset;
+          border-style: solid;
+          border-width: 0.063rem;
+          border-color: $Cloud;
+          background-color: $white;
+          color: $Slate;
+          outline-color: $Cloud;
+
+          &:hover {
+            outline-color: $Instock-Indigo;
+            background-color: $white;
+            border-color: $Instock-Indigo;
+            color: $Instock-Indigo;
+          }
+        }
+
+        &-button-add {
+          @include primary-button;
+          border-color: unset;
+          border-style: solid;
+          border-width: 0.063rem;
+          border-color: $Instock-Indigo;
+          margin-left: 1rem;
+        }
+
+        //for tab
+
+        &-button-flex-tablet {
+          display: none;
+
+          @include tablet {
+            display: unset;
+            display: flex;
+
+            justify-content: right;
+            padding: 1rem 0rem;
+          }
+
+          &-link {
+            @include tablet {
+              display: unset;
+              display: flex;
+
+              justify-content: right;
+            }
+          }
+        }
+
+        &-button-cancel-tablet {
+          width: 4.5rem;
+          padding: 0rem 1rem;
+          border-radius: 1.25rem;
+          border-color: unset;
+          border-style: solid;
+          border-width: 0.063rem;
+          border-color: $Cloud;
+          background-color: $white;
+          color: $Slate;
+          outline-color: $Cloud;
+
+          &:hover {
+            outline-color: $Instock-Indigo;
+            background-color: $white;
+            border-color: $Instock-Indigo;
+            color: $Instock-Indigo;
+          }
+        }
+
+        &-button-add-tablet {
+          @include tablet {
+            @include primary-button;
+            width: 4.5rem;
+            border-color: unset;
+            border-style: solid;
+            border-width: 0.063rem;
+            border-color: $Instock-Indigo;
+            margin-left: 1rem;
+            margin-right: 2.5rem;
+          }
+        }
+      }
+
+      &-button-cancel-tablet {
+        width: 4.5rem;
+        padding: 0rem 1rem;
+        border-radius: 1.25rem;
+        border-color: unset;
+        border-style: solid;
+        border-width: 0.063rem;
+        border-color: $Cloud;
+        background-color: $white;
+        color: $Slate;
+        outline-color: $Cloud;
+
+        &:hover {
+          outline-color: $Instock-Indigo;
+          background-color: $white;
+          border-color: $Instock-Indigo;
+          color: $Instock-Indigo;
+        }
+      }
+
+      &-button-add-tablet {
+        @include tablet {
+          @include primary-button;
+          width: 4.5rem;
+          border-color: unset;
+          border-style: solid;
+          border-width: 0.063rem;
+          border-color: $Instock-Indigo;
+          margin-left: 1rem;
+          margin-right: 2.5rem;
+        }
+      }
+    }
+  }
+}
+//buttons for tablet and desktop view

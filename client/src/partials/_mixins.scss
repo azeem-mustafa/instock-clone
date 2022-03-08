@@ -1,0 +1,109 @@
+@use './variables' as *;
+
+/*screen breakpoints*/
+
+@mixin tablet {
+  @media (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+//form fields
+
+@mixin form-fields {
+  height: 2rem;
+  width: 100%;
+  padding: 0rem 1rem;
+  border-radius: 1.25rem;
+  color: $Cloud;
+  border: 1px solid $Cloud;
+
+
+  &:active {
+    outline-color: $Instock-Indigo;
+    color: $Slate;
+  }
+
+  &:focus{
+    outline-color: $Instock-Indigo;
+  }
+
+  @include tablet {
+    height: 2.375rem;
+  }
+}
+
+//buttons - cta
+
+//double check the padding equal to 16px on either side when implementing
+
+@mixin primary-button {
+  cursor: pointer;
+  height: 2rem;
+  width: 100%;
+  padding: 0rem 1rem;
+  color: $white;
+  background-color: $Instock-Indigo;
+  border-radius: 1.25rem;
+
+  &:hover {
+    background-color: $Graphite;
+  }
+
+  @include tablet {
+    width: unset;
+    height: 2.375rem;
+  }
+}
+
+@mixin secondary-button {
+  cursor: pointer;
+  height: 2rem;
+  width: 100%;
+  padding: 0rem 1rem;
+  border-radius: 1.25rem;
+  background-color: $Light-Grey;
+  color: $Cloud;
+  outline-color: $Cloud;
+
+  &:hover {
+    outline-color: $Instock-Indigo;
+    color: $Instock-Indigo;
+  }
+
+  @include tablet {
+    width: unset;
+    height: 2.375rem;
+  }
+}
+
+@mixin delete-button {
+  height: 2rem;
+  width: 100%;
+  padding: 0rem 1rem;
+  border-radius: 1.25rem;
+  background-color: $Red;
+  color: $white;
+  outline-color: $Red;
+
+  &:hover {
+    outline-color: $Graphite;
+    background-color: $Graphite;
+  }
+
+  @include tablet {
+    width: unset;
+    height: 2.375rem;
+  }
+}
+
+@mixin margin-reset{
+  margin-block-start: 0em;
+      margin-block-end: 0em;
+}

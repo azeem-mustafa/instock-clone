@@ -1,0 +1,175 @@
+/*screen breakpoints*/
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-Black.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-Black.woff") format("woff"), url("../assets/fonts/TitilliumWeb-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-Bold.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-Bold.woff") format("woff"), url("../assets/fonts/TitilliumWeb-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-Italic.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-Italic.woff") format("woff"), url("../assets/fonts/TitilliumWeb-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-ExtraLight.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-ExtraLight.woff") format("woff"), url("../assets/fonts/TitilliumWeb-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-LightItalic.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-LightItalic.woff") format("woff"), url("../assets/fonts/TitilliumWeb-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-ExtraLightItalic.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-ExtraLightItalic.woff") format("woff"), url("../assets/fonts/TitilliumWeb-ExtraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-Light.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-Light.woff") format("woff"), url("../assets/fonts/TitilliumWeb-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-BoldItalic.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-BoldItalic.woff") format("woff"), url("../assets/fonts/TitilliumWeb-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-SemiBoldItalic.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-SemiBoldItalic.woff") format("woff"), url("../assets/fonts/TitilliumWeb-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-SemiBold.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-SemiBold.woff") format("woff"), url("../assets/fonts/TitilliumWeb-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-Regular.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-Regular.woff") format("woff"), url("../assets/fonts/TitilliumWeb-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+*, *::before, *::after {
+  font-family: "Titillium Web";
+}
+
+.warehouse {
+  margin-top: 0.5rem;
+  text-align: left;
+  padding: 1rem 1.6rem;
+  border-top: 0.0625rem solid #bdc5d5;
+}
+.warehouse__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 auto;
+}
+.warehouse__address-header, .warehouse__contact-header, .warehouse__info-header {
+  color: #5c667e;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.warehouse__address-header {
+  margin-top: 0.3rem;
+}
+.warehouse__address {
+  margin: 0;
+}
+.warehouse__contact-details {
+  display: flex;
+}
+.warehouse__contact-container {
+  margin-right: 0.6rem;
+}
+.warehouse__contact-name {
+  width: 8.75rem;
+}
+.warehouse__address, .warehouse__contact-name, .warehouse__info-number, .warehouse__contact-title, .warehouse__info-email {
+  font-size: 0.8125rem;
+  color: #13182c;
+  margin: 0;
+}
+.warehouse__address-span::before {
+  content: "\a";
+  white-space: pre;
+}
+@media (min-width: 48rem) {
+  .warehouse {
+    padding: 1.4rem 1.7rem;
+  }
+  .warehouse__address, .warehouse__contact-name, .warehouse__info-number, .warehouse__contact-title, .warehouse__info-email {
+    font-size: 0.875rem;
+    color: #13182c;
+    margin: 0;
+  }
+  .warehouse__container {
+    width: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .warehouse__contact-header, .warehouse__info-header, .warehouse__address-header {
+    margin-top: 0rem;
+    font-size: 0.75rem;
+  }
+  .warehouse__info-container {
+    width: 13rem;
+  }
+  .warehouse__address-container {
+    width: 13.375rem;
+    margin-right: 2rem;
+  }
+  .warehouse__contact-details {
+    padding-left: 2.5rem;
+    border-left: 0.1rem solid #bdc5d5;
+  }
+  .warehouse__contact-container {
+    margin-right: 1.5rem;
+  }
+}
+@media (min-width: 48rem) and (min-width: 80rem) {
+  .warehouse {
+    padding: 1.4rem 2.1rem;
+  }
+  .warehouse__contact-details {
+    width: 59.7%;
+  }
+  .warehouse__contact-container {
+    margin-right: 6rem;
+  }
+  .warehouse__address-container {
+    width: 40.3%;
+  }
+  .warehouse__contact-header, .warehouse__info-header, .warehouse__address-header {
+    margin-bottom: 0.15rem;
+  }
+}/*# sourceMappingURL=WarehouseDetails.css.map */

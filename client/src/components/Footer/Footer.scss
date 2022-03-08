@@ -1,0 +1,27 @@
+@use '../../partials/mixins' as *;
+@use '../../partials/typography' as *;
+@use '../../partials/variables' as *;
+
+.site-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $Light-Grey;
+
+    &__copyright {
+        color: $Slate;
+        margin: 2.5rem 0;
+        font-size: 0.6875rem;
+        line-height: 1rem;
+        
+        @include tablet {
+            font-size: 0.75rem;
+            line-height: 1.125rem;
+        }
+        
+        @include desktop {
+            margin: 3rem 0;
+
+        }
+    }
+}

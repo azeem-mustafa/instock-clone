@@ -1,0 +1,144 @@
+@use '../../partials/variables' as *;
+@use '../../partials/mixins' as *;
+
+.item {
+  text-align: left;
+  padding: 1rem 1.6rem;
+  border-top: 0.0625rem solid $Cloud;
+  color: $Instock-Black;
+
+  &__description-header,
+  &__category-header,
+  &__status-header,
+  &__quantity-header,
+  &__location-header {
+    line-height: 1rem;
+    font-size: 0.6875rem;
+    color: $Slate;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+
+  &__paragraph,
+  &__category,
+  &__quantity,
+  &__location {
+    font-weight: 400;
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+  }
+
+  &__status {
+    color: $Green;
+    font-weight: 600;
+    font-size: 0.6875rem;
+    line-height: 1rem;
+    background-color: rgba(21, 132, 99, 7%);
+    width: 3.8125rem;
+    border-radius: 1.25rem;
+    text-align: center;
+    padding: 0.25rem 0.5rem;
+
+    &--out {
+      color: $Red;
+      font-weight: 600;
+      font-size: 0.6875rem;
+      line-height: 1rem;
+      background-color: rgba(201, 69, 21, 0.07);
+      width: 3.8125rem;
+      border-radius: 1.25rem;
+      text-align: center;
+      padding: 0.25rem 0.5rem;
+    }
+  }
+
+  &__description,
+  &__category-container,
+  &__status-container,
+  &__quantity-container {
+    margin-bottom: 1rem;
+  }
+
+  &__info {
+    display: flex;
+  }
+
+  &__status-container,
+  &__quantity-container {
+    width: 50%;
+  }
+
+  &__quantity-container {
+    padding-left: 0.6rem;
+  }
+
+  @include tablet {
+    & {
+      display: flex;
+      padding: 1.4rem 1.7rem;
+    }
+
+    &__description-container,
+    &__info-container {
+      width: 50%;
+    }
+
+    &__description-container {
+      padding-right: 3rem;
+    }
+
+    &__info-container {
+      border-left: 0.1rem solid $Cloud;
+      padding-left: 2.5rem;
+    }
+
+    &__location-container {
+      margin-top: 0.3rem;
+    }
+
+    &__description,
+    &__info {
+      height: 50%;
+    }
+
+    &__description-header,
+    &__category-header,
+    &__status-header,
+    &__quantity-header,
+    &__location-header {
+      line-height: 1.125rem;
+      font-size: 0.75rem;
+      color: $Slate;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    &__paragraph,
+    &__category,
+    &__quantity,
+    &__location {
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+    }
+  }
+
+  @include desktop {
+    &__description-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &__description {
+      margin-bottom: 1.6rem;
+    }
+
+    &__location-container {
+      margin-top: 0.9rem;
+    }
+
+    &__category-container {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

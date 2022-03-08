@@ -1,0 +1,209 @@
+/*screen breakpoints*/
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-Black.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-Black.woff") format("woff"), url("../assets/fonts/TitilliumWeb-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-Bold.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-Bold.woff") format("woff"), url("../assets/fonts/TitilliumWeb-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-Italic.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-Italic.woff") format("woff"), url("../assets/fonts/TitilliumWeb-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-ExtraLight.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-ExtraLight.woff") format("woff"), url("../assets/fonts/TitilliumWeb-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-LightItalic.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-LightItalic.woff") format("woff"), url("../assets/fonts/TitilliumWeb-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-ExtraLightItalic.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-ExtraLightItalic.woff") format("woff"), url("../assets/fonts/TitilliumWeb-ExtraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-Light.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-Light.woff") format("woff"), url("../assets/fonts/TitilliumWeb-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-BoldItalic.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-BoldItalic.woff") format("woff"), url("../assets/fonts/TitilliumWeb-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-SemiBoldItalic.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-SemiBoldItalic.woff") format("woff"), url("../assets/fonts/TitilliumWeb-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-SemiBold.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-SemiBold.woff") format("woff"), url("../assets/fonts/TitilliumWeb-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/TitilliumWeb-Regular.woff2") format("woff2"), url("../assets/fonts/TitilliumWeb-Regular.woff") format("woff"), url("../assets/fonts/TitilliumWeb-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+*, *::before, *::after {
+  font-family: "Titillium Web";
+}
+
+.warehouse-form__input-group {
+  border: none;
+  margin: 0;
+  padding: 0rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 48rem) {
+  .warehouse-form__input-group {
+    padding: 0rem 2rem;
+  }
+}
+@media (min-width: 80rem) {
+  .warehouse-form__input-group {
+    padding: 0rem 10%;
+  }
+}
+@media (min-width: 48rem) {
+  .warehouse-form__input-group {
+    flex-basis: 50%;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+@media (min-width: 80rem) {
+  .warehouse-form__input-group {
+    padding: 0 2.5rem 0.5rem;
+  }
+}
+@media (min-width: 48rem) {
+  .warehouse-form__input-group--left {
+    padding-right: 2rem;
+    border-right: 1px solid #bdc5d5;
+  }
+}
+.warehouse-form__input-group--right {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #bdc5d5;
+}
+@media (min-width: 48rem) {
+  .warehouse-form__input-group--right {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+    padding-left: 2rem;
+  }
+}
+.warehouse-form__form-group-title {
+  color: #13182c;
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+@media (min-width: 48rem) {
+  .warehouse-form__form-group-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+.warehouse-form__field-label {
+  color: #13182c;
+  margin-bottom: 0.25rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  margin-top: 1.5rem;
+}
+@media (min-width: 48rem) {
+  .warehouse-form__field-label {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+.warehouse-form__input, .warehouse-form__input--error {
+  height: 2rem;
+  width: 100%;
+  padding: 0rem 1rem;
+  border-radius: 1.25rem;
+  color: #bdc5d5;
+  border: 1px solid #bdc5d5;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  color: #13182c;
+}
+.warehouse-form__input:active, .warehouse-form__input--error:active {
+  outline-color: #2e66e5;
+  color: #5c667e;
+}
+@media (min-width: 48rem) {
+  .warehouse-form__input, .warehouse-form__input--error {
+    height: 2.375rem;
+  }
+}
+@media (min-width: 48rem) {
+  .warehouse-form__input, .warehouse-form__input--error {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+.warehouse-form__input::-moz-placeholder, .warehouse-form__input--error::-moz-placeholder {
+  color: #5c667e;
+}
+.warehouse-form__input:-ms-input-placeholder, .warehouse-form__input--error:-ms-input-placeholder {
+  color: #5c667e;
+}
+.warehouse-form__input::placeholder, .warehouse-form__input--error::placeholder {
+  color: #5c667e;
+}
+.warehouse-form__input:focus, .warehouse-form__input--error:focus {
+  outline: none;
+  border: 1px solid #2e66e5;
+}
+.warehouse-form__input--error {
+  border: 1px solid #C94515;
+}
+.warehouse-form__error {
+  display: inline-block;
+  color: #C94515;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  margin: 0 0.25rem;
+}
+.warehouse-form__error-icon {
+  width: 0.8125rem;
+}/*# sourceMappingURL=WarehouseForm.css.map */

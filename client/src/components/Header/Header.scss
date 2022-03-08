@@ -1,0 +1,113 @@
+@use "../../partials/_mixins.scss" as *;
+@use "../../partials/_typography.scss" as *;
+@use '../../partials/mixin-padding' as *;
+@use '../../partials/variables' as *;
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li,
+a {
+  font-family: "Titillium Web";
+  text-decoration: none;
+  list-style-type: none;
+  color: #ffffff;
+}
+
+.nav {
+  background-color: #232940;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 12.5rem;
+
+  @include tablet {
+    flex-direction: row;
+    height: 11.625rem;
+  }
+
+  &__flex-box {
+    @include padding-sides;
+
+    @include tablet {
+      flex-grow: 2;
+      display: flex;
+      align-items: flex-start;
+    }
+    @include desktop {
+      width: 80%;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    @include desktop {
+      display: flex;
+      width: 30%;
+      justify-content: left;
+    }
+  }
+  &__logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1rem;
+
+    @include tablet {
+      flex-grow: 2;
+      justify-content: right;
+      align-items: center;
+    }
+    @include desktop {
+      width: 50%;
+      flex-grow: unset;
+    }
+  }
+
+  // nav active and links need to alter per page
+  &__active {
+    @include primary-button;
+    width: 10.188rem;
+    background-color: $Instock-Black;
+    padding: 0rem 1rem;
+    text-align: center;
+    align-items: center;
+
+    &:hover {
+      text-decoration: underline 2px solid #ffffff;
+      background-color: #13182c;
+    }
+    @include tablet {
+      display: flex;
+      margin-right: 24px;
+      height: 2.8rem;
+    }
+  }
+
+  &__links {
+    @include primary-button;
+    width: 10.188rem;
+    text-align: center;
+    background-color: #232940;
+    padding: 0rem 1rem;
+
+    &:hover {
+      text-decoration: underline 2px solid #ffffff;
+      background-color: #13182c;
+      height: 2.8rem; // height change
+    }
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
